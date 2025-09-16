@@ -1,8 +1,15 @@
 import os
+import sys
 from typing import List
 
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
+
+# Ensure project root is on sys.path when running as a script
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
+from rag.vectorstore import add_texts, get_retriever
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.schema import Document
 
@@ -21,16 +28,13 @@ def main() -> None:
     splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=0)
     chunks = splitter.split_documents(docs)
 
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    # Use local Ollama embeddings to avoid heavy torch installs on Windows
+    # Make sure to: ollama pull nomic-embed-text
+    embeddings = OllamaEmbeddings(model="nomic-embed-text")
 
-    vectorstore = FAISS.from_documents(chunks, embeddings)
-
-    index_dir = os.path.join(os.path.dirname(__file__), "..", "rag", "faiss_index")
-    index_dir = os.path.abspath(index_dir)
-    os.makedirs(index_dir, exist_ok=True)
-    vectorstore.save_local(index_dir)
-
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+    texts = [d.page_content for d in chunks]
+    add_texts(texts)
+    retriever = get_retriever(k=3)
     test = retriever.get_relevant_documents("policy chi tiêu")
     print("Seeded docs. Sample retrieve:")
     for d in test:

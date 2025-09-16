@@ -8,7 +8,7 @@ Hệ thống gồm 5 agents phối hợp xử lý câu hỏi và tác vụ tài 
 - Alert & Risk Agent: phát hiện giao dịch bất thường bằng z‑score.
 - Spending Analyzer Agent: tổng hợp chi phí subscription theo vendor để tối ưu.
 
-RAG chạy local bằng FAISS + HuggingFace embeddings để truy xuất policy/quy định đã nhúng. LLM sử dụng Ollama (miễn phí, local). Nếu Ollama không sẵn, hệ thống vẫn trả về các kết quả phân tích bảng Pandas.
+RAG chạy local in‑memory (DocArrayInMemorySearch) với embeddings từ Ollama (`nomic-embed-text`). Không cần bất kỳ DB hay thêm package hệ thống nào, phù hợp Windows.
 
 Điểm chính của bản demo
 - Không cần Docker/K8s, không cần PostgreSQL/pgvector.
@@ -46,11 +46,11 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-3) Khởi tạo RAG local (FAISS)
+3) Khởi tạo RAG local (in‑memory)
 ```bash
 python scripts/rag_setup.py
 ```
-- Script sẽ tạo FAISS index tại `rag/faiss_index/`.
+- In‑memory, không tạo file index. Có thể chạy trực tiếp.
 
 4) Chạy demo giao diện (Streamlit)
 ```bash
@@ -70,7 +70,7 @@ pytest -q
 
 Ghi chú cấu hình
 - Mặc định dùng Ollama, không cần API key.
-- FAISS index: `rag/faiss_index/`.
+- Chroma index: `rag/chroma_index/`.
 - CSV đã có trong `data/`.
 
 FAQ nhanh

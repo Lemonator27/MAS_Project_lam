@@ -1,5 +1,13 @@
+import os
+import sys
 import streamlit as st
 import pandas as pd
+
+# Ensure project root on PYTHONPATH when running via Streamlit
+ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(ROOT, os.pardir))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 
 from orchestration.mas_graph import app as mas_app
 
