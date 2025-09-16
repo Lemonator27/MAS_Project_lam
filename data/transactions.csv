@@ -1,0 +1,17 @@
+transaction_id,amount,date,category,merchant,employee_id,fraud_flag
+1,1200.50,2024-06-01,subscription,Slack,10,0
+2,850.00,2024-06-02,marketing,Google Ads,11,0
+3,5400.00,2024-06-03,travel,Delta,12,0
+4,25000.00,2024-06-04,payroll,PayrollCo,0,0
+5,9999.99,2024-06-05,subscription,Zoom,13,0
+6,150.00,2024-06-06,travel,Uber,21,0
+7,420.00,2024-06-07,marketing,Facebook Ads,11,0
+8,75.49,2024-06-08,subscription,Notion,14,0
+9,199.00,2024-06-09,subscription,GitHub,18,0
+10,8250.00,2024-06-10,travel,United,22,0
+11,50.00,2024-06-11,subscription,Canva,19,0
+12,300.00,2024-06-12,marketing,LinkedIn Ads,17,0
+13,12000.00,2024-06-13,travel,Delta,33,0
+14,480.00,2024-06-14,subscription,AWS,0,0
+15,1750.00,2024-06-15,marketing,Google Ads,11,0
+

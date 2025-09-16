@@ -1,0 +1,7 @@
+dept,project_id,approved_amount,actual_spent
+Marketing,1,60000,50000
+R&D,2,40000,35000
+Sales,3,30000,25000
+HR,4,20000,18000
+Engineering,5,120000,95000
+

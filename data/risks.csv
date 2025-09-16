@@ -1,0 +1,5 @@
+transaction_id,risk_score,anomaly_type
+3,8.5,overspend
+5,9.2,fraud
+13,7.8,overspend
+
