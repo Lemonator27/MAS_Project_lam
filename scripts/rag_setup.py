@@ -1,19 +1,10 @@
 import os
 from typing import List
 
-from langchain_community.vectorstores.pgvector import PGVector
+from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.schema import Document
-
-
-def get_connection_string() -> str:
-    user = os.getenv("PGUSER", "mas_user")
-    password = os.getenv("PGPASSWORD", "mas_pass")
-    host = os.getenv("PGHOST", "localhost")
-    port = os.getenv("PGPORT", "5432")
-    db = os.getenv("PGDATABASE", "mas_db")
-    return f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}"
 
 
 def seed_policy_docs() -> List[Document]:
@@ -32,14 +23,14 @@ def main() -> None:
 
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-    vectorstore = PGVector.from_documents(
-        documents=chunks,
-        embedding=embeddings,
-        collection_name="finance_docs",
-        connection_string=get_connection_string(),
-    )
+    vectorstore = FAISS.from_documents(chunks, embeddings)
 
-    retriever = vectorstore.as_retriever(k=3)
+    index_dir = os.path.join(os.path.dirname(__file__), "..", "rag", "faiss_index")
+    index_dir = os.path.abspath(index_dir)
+    os.makedirs(index_dir, exist_ok=True)
+    vectorstore.save_local(index_dir)
+
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
     test = retriever.get_relevant_documents("policy chi tiêu")
     print("Seeded docs. Sample retrieve:")
     for d in test:

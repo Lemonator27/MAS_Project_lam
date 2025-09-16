@@ -3,7 +3,11 @@ import operator
 
 from langgraph.graph import StateGraph, END
 
-from agents.coordinator_agent import route_query
+try:
+    from agents.coordinator_agent import route_query
+except Exception:
+    # fallback if coordinator_agent has encoding issues; use coord.py
+    from agents.coord import route_query
 
 
 class AgentState(TypedDict):
