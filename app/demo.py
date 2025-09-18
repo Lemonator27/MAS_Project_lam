@@ -2,6 +2,13 @@ import os
 import sys
 import streamlit as st
 import pandas as pd
+import warnings
+
+try:
+    from langchain_core._api.deprecation import LangChainDeprecationWarning
+    warnings.filterwarnings("ignore", category=LangChainDeprecationWarning)
+except Exception:
+    pass
 
 # Ensure project root on PYTHONPATH when running via Streamlit
 ROOT = os.path.dirname(os.path.abspath(__file__))

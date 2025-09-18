@@ -1,7 +1,4 @@
-from typing import TypedDict, Annotated, List, Dict
-import operator
-
-from langgraph.graph import StateGraph, END
+from typing import List, Dict
 
 try:
     from agents.coordinator_agent import route_query
@@ -10,21 +7,20 @@ except Exception:
     from agents.coord import route_query
 
 
-class AgentState(TypedDict):
-    messages: Annotated[List[Dict], operator.add]
-    result: Dict
+class _SimpleApp:
+    """Lightweight drop-in replacement exposing invoke({...}) like langgraph app.
+
+    Expects state: {"messages": [{"role": str, "content": str}, ...]}
+    Returns state with {"result": any} merged.
+    """
+
+    def invoke(self, state: Dict) -> Dict:
+        messages: List[Dict] = state.get("messages", [])
+        user_msg = (messages[-1] if messages else {}).get("content", "")
+        out = route_query(user_msg)
+        new_state = dict(state)
+        new_state["result"] = out
+        return new_state
 
 
-def coordinator_node(state: AgentState) -> AgentState:
-    user_msg = state["messages"][-1]["content"]
-    out = route_query(user_msg)
-    state["result"] = out
-    return state
-
-
-graph = StateGraph(AgentState)
-graph.add_node("coordinator", coordinator_node)
-graph.set_entry_point("coordinator")
-graph.add_edge("coordinator", END)
-
-app = graph.compile()
+app = _SimpleApp()

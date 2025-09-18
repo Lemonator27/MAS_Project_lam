@@ -1,9 +1,6 @@
 from typing import Any, Dict
 
 import pandas as pd
-from langchain.agents import AgentExecutor, Tool
-from langchain_openai import OpenAI
-from langchain_community.llms import Ollama
 
 from rag.vectorstore import get_retriever
 
@@ -36,22 +33,26 @@ def rag_tool(query: str) -> str:
     return "\n".join(d.page_content for d in docs)
 
 
-def build_budget_agent() -> AgentExecutor:
-    # Prefer local Ollama if available; fallback to OpenAI if env key exists
-    try:
-        llm = Ollama(model="llama3")
-    except Exception:
-        llm = OpenAI()  # requires OPENAI_API_KEY
+class BudgetAgentExecutor:
+    """Lightweight executor to avoid LangChain Agent deprecations and incompatibilities.
 
-    tools = [
-        Tool(name="budget_table", func=simple_budget_tool, description="Show budget table and variance"),
-        Tool(name="rag_retrieve", func=rag_tool, description="Retrieve finance policy via RAG"),
-    ]
+    Exposes invoke({"input": str}) -> {"output": str}
+    """
 
-    from langchain.agents import initialize_agent
+    def invoke(self, inputs: Dict[str, Any]) -> Dict[str, Any]:
+        query = (inputs.get("input") or "").lower()
+        outputs: list[str] = []
 
-    agent = initialize_agent(tools=tools, llm=llm, agent="zero-shot-react-description", verbose=True)
-    return AgentExecutor(agent=agent, tools=tools, verbose=True)
+        # If query hints at policy/docs, include RAG answer first
+        if any(k in query for k in ["policy", "quy định", "gaap", "travel", "rag"]):
+            rag = rag_tool(query)
+            if rag:
+                outputs.append(f"RAG:\n{rag}")
+
+        # Always include budget table
+        outputs.append(simple_budget_tool(query))
+
+        return {"output": "\n\n".join(outputs)}
 
 
-budget_agent_executor = build_budget_agent()
+budget_agent_executor = BudgetAgentExecutor()
