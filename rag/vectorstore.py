@@ -1,22 +1,26 @@
 import os
 import json
 from functools import lru_cache
-from typing import Any, List, Tuple
+from typing import Any, List, Tuple, Optional
 
 import numpy as np
-from langchain_community.embeddings import OllamaEmbeddings
 
 
 INDEX_PATH = os.path.join(os.path.dirname(__file__), "simple_index.json")
-_EMBEDDER: OllamaEmbeddings | None = None
+_EMBEDDER: Optional[object] = None  # resolved lazily to avoid hard dependency
 _INDEX: List[Tuple[str, List[float]]] | None = None
 
 
 @lru_cache(maxsize=1)
-def _get_embedder() -> OllamaEmbeddings:
+def _get_embedder() -> Optional[object]:
     global _EMBEDDER
-    if _EMBEDDER is None:
+    if _EMBEDDER is not None:
+        return _EMBEDDER
+    try:
+        from langchain_community.embeddings import OllamaEmbeddings  # type: ignore
         _EMBEDDER = OllamaEmbeddings(model="nomic-embed-text")
+    except Exception:
+        _EMBEDDER = None
     return _EMBEDDER
 
 
@@ -45,9 +49,14 @@ def _cosine(a: np.ndarray, b: np.ndarray) -> float:
 def add_texts(texts: List[str]) -> None:
     index = _load_index()
     emb = _get_embedder()
-    vectors = emb.embed_documents(texts)
-    for t, v in zip(texts, vectors):
-        index.append((t, v))
+    if emb is None:
+        # store texts without embeddings so retriever returns empty until embeddings available
+        for t in texts:
+            index.append((t, []))
+    else:
+        vectors = emb.embed_documents(texts)
+        for t, v in zip(texts, vectors):
+            index.append((t, v))
     with open(INDEX_PATH, "w", encoding="utf-8") as f:
         json.dump([{"text": t, "embedding": v} for t, v in index], f, ensure_ascii=False)
 
@@ -57,7 +66,10 @@ def get_retriever(k: int = 4) -> Any:
         index = _load_index()
         if not index:
             return []
-        qv = np.array(_get_embedder().embed_query(query), dtype=float)
+        emb = _get_embedder()
+        if emb is None:
+            return []
+        qv = np.array(emb.embed_query(query), dtype=float)
         scored = [
             (txt, _cosine(qv, np.array(vec, dtype=float))) for txt, vec in index
         ]
