@@ -5,7 +5,7 @@ import pandas as pd
 from rag.vectorstore import get_retriever
 
 
-def load_budgets(path: str = "data/budgets.csv") -> pd.DataFrame:
+def load_budgets(path: str = "data/budgets_extended.csv") -> pd.DataFrame:
     try:
         return pd.read_csv(path)
     except Exception:
@@ -22,7 +22,7 @@ def load_budgets(path: str = "data/budgets.csv") -> pd.DataFrame:
 def simple_budget_tool(_: str) -> str:
     df = load_budgets()
     summary = (
-        df.assign(variance=df["approved_amount"] - df["actual_spent"])  # noqa: W503
+        df.assign(variance=df["approved_amount"] - df["actual_spent"])
         .to_string(index=False)
     )
     return f"Budget summary (variance = approved - actual):\n{summary}"
@@ -43,13 +43,11 @@ class BudgetAgentExecutor:
         query = (inputs.get("input") or "").lower()
         outputs: list[str] = []
 
-        # If query hints at policy/docs, include RAG answer first
         if any(k in query for k in ["policy", "quy định", "gaap", "travel", "rag"]):
             rag = rag_tool(query)
             if rag:
                 outputs.append(f"RAG:\n{rag}")
 
-        # Always include budget table
         outputs.append(simple_budget_tool(query))
 
         return {"output": "\n\n".join(outputs)}

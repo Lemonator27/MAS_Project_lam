@@ -1,10 +1,5 @@
 from typing import List, Dict
-
-try:
-    from agents.coordinator_agent import route_query
-except Exception:
-    # fallback if coordinator_agent has encoding issues; use coord.py
-    from agents.coord import route_query
+from agents.coord import route_query
 
 
 class _SimpleApp:

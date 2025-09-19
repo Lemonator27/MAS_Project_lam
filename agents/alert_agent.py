@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def detect_anomalies(csv_path: str = "data/transactions.csv", z_threshold: float = 3.0) -> pd.DataFrame:
+def detect_anomalies(csv_path: str = "data/transactions_extended.csv", z_threshold: float = 3.0) -> pd.DataFrame:
     try:
         df = pd.read_csv(csv_path)
     except Exception:

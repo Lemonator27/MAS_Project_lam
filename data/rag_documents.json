@@ -1,0 +1,910 @@
+[
+  {
+    "text": "Policy: Chi tiêu trên $5,000 cần được phê duyệt bởi CFO. Chi tiêu trên $10,000 cần được phê duyệt bởi CEO.",
+    "category": "spending_policy",
+    "tags": [
+      "approval",
+      "spending_limit",
+      "cfo",
+      "ceo"
+    ]
+  },
+  {
+    "text": "GAAP: Tất cả báo cáo tài chính phải tuân thủ nguyên tắc dồn tích (accrual basis). Doanh thu được ghi nhận khi dịch vụ được cung cấp.",
+    "category": "accounting_standards",
+    "tags": [
+      "gaap",
+      "accrual",
+      "revenue_recognition"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,000 mỗi nhân viên mỗi tháng cho chi phí đi lại. Ngoại lệ cần phê duyệt trước 48 giờ.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "limit",
+      "approval",
+      "expense"
+    ]
+  },
+  {
+    "text": "Subscription Management: Tất cả subscription SaaS phải được đánh giá hàng quý. Subscription không sử dụng trong 6 tháng sẽ bị cắt giảm.",
+    "category": "subscription_policy",
+    "tags": [
+      "saas",
+      "subscription",
+      "review",
+      "optimization"
+    ]
+  },
+  {
+    "text": "Cash Flow Management: Duy trì tỷ lệ thanh khoản tối thiểu 2:1. Cảnh báo khi dự báo dòng tiền âm trong 30 ngày tới.",
+    "category": "cash_flow_policy",
+    "tags": [
+      "cash_flow",
+      "liquidity",
+      "forecast",
+      "alert"
+    ]
+  },
+  {
+    "text": "Vendor Management: Đánh giá vendor hàng năm. Ưu tiên vendor có giá cả cạnh tranh và dịch vụ tốt.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "evaluation",
+      "cost_optimization"
+    ]
+  },
+  {
+    "text": "Fraud Detection: Giao dịch trên $1,000 từ vendor mới cần xác minh. Giao dịch bất thường sẽ được flag tự động.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "detection",
+      "verification",
+      "anomaly"
+    ]
+  },
+  {
+    "text": "Budget Planning: Ngân sách được lập hàng quý. Variance trên 10% cần giải thích và điều chỉnh.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "planning",
+      "variance",
+      "quarterly"
+    ]
+  },
+  {
+    "text": "Invoice Processing: Hóa đơn phải được xử lý trong 5 ngày làm việc. Hóa đơn quá hạn sẽ bị phạt 1.5% mỗi tháng.",
+    "category": "invoice_policy",
+    "tags": [
+      "invoice",
+      "processing",
+      "deadline",
+      "penalty"
+    ]
+  },
+  {
+    "text": "Cost Optimization: Mục tiêu giảm 5% chi phí operating mỗi năm. Tập trung vào subscription và vendor optimization.",
+    "category": "cost_optimization",
+    "tags": [
+      "cost_reduction",
+      "optimization",
+      "subscription",
+      "vendor"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,500 mỗi phòng ban mỗi tháng cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 15% cần điều chỉnh. Ngân sách được lập hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên dịch vụ cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 15% cần phê duyệt. Ngân sách được lập hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ địa điểm mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 10% cần phê duyệt. Ngân sách được lập hàng quý.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $5,000 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm software.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng quý. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,500 từ thời gian bất thường cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 10% cần giải thích. Ngân sách được lập hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $10,000 cần được phê duyệt bởi Director. Chi tiêu này bao gồm marketing.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $1,000 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm software.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng quý. Ưu tiên chất lượng cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên chất lượng cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,500 mỗi phòng ban mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $1,000 cần được phê duyệt bởi Director. Chi tiêu này bao gồm travel.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $3,000 mỗi nhân viên mỗi tháng cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 5% cần giải thích. Ngân sách được review hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $500 từ địa điểm mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 20% cần điều chỉnh. Ngân sách được review hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ địa điểm mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi phòng ban mỗi tháng cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor 6 tháng. Ưu tiên dịch vụ cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi phòng ban mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ địa điểm mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,500 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor 6 tháng. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,000 mỗi phòng ban mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi phòng ban mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $3,000 mỗi phòng ban mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 5% cần phê duyệt. Ngân sách được review hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 10% cần phê duyệt. Ngân sách được review hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $5,000 cần được phê duyệt bởi CFO. Chi tiêu này bao gồm marketing.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,000 mỗi phòng ban mỗi tháng cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor 6 tháng. Ưu tiên chất lượng cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 20% cần điều chỉnh. Ngân sách được review hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,000 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,500 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $500 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,000 từ thời gian bất thường cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 20% cần giải thích. Ngân sách được lập hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng quý. Ưu tiên chất lượng cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên chất lượng cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $10,000 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm software.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $7,500 cần được phê duyệt bởi CFO. Chi tiêu này bao gồm travel.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 5% cần điều chỉnh. Ngân sách được lập hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng quý. Ưu tiên dịch vụ cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng quý. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên dịch vụ cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên dịch vụ cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $10,000 cần được phê duyệt bởi Director. Chi tiêu này bao gồm software.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $2,500 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm marketing.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $1,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor 6 tháng. Ưu tiên chất lượng cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $2,000 từ thời gian bất thường cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng quý. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 10% cần điều chỉnh. Ngân sách được lập hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor 6 tháng. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,000 mỗi nhân viên mỗi tháng cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $500 từ địa điểm mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $500 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $7,500 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm marketing.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,500 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 10% cần điều chỉnh. Ngân sách được lập hàng quý.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 15% cần giải thích. Ngân sách được lập hàng năm.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor 6 tháng. Ưu tiên dịch vụ cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $5,000 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm software.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Vendor Policy: Đánh giá vendor hàng năm. Ưu tiên giá cả cạnh tranh.",
+    "category": "vendor_policy",
+    "tags": [
+      "vendor",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 20% cần giải thích. Ngân sách được review hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $10,000 cần được phê duyệt bởi CEO. Chi tiêu này bao gồm consulting.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,000 từ địa điểm mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,500 mỗi nhân viên mỗi quý cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Policy: Chi tiêu trên $7,500 cần được phê duyệt bởi CFO. Chi tiêu này bao gồm travel.",
+    "category": "spending_policy",
+    "tags": [
+      "spending",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Fraud Prevention: Giao dịch trên $1,000 từ vendor mới cần xác minh.",
+    "category": "fraud_prevention",
+    "tags": [
+      "fraud",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 20% cần điều chỉnh. Ngân sách được lập hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Travel Policy: Giới hạn $2,000 mỗi phòng ban mỗi tháng cho chi phí đi lại.",
+    "category": "travel_policy",
+    "tags": [
+      "travel",
+      "policy",
+      "management"
+    ]
+  },
+  {
+    "text": "Budget Policy: Variance trên 15% cần giải thích. Ngân sách được lập hàng tháng.",
+    "category": "budget_policy",
+    "tags": [
+      "budget",
+      "policy",
+      "management"
+    ]
+  }
+]

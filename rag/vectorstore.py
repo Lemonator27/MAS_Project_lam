@@ -7,7 +7,7 @@ import numpy as np
 
 
 INDEX_PATH = os.path.join(os.path.dirname(__file__), "simple_index.json")
-_EMBEDDER: Optional[object] = None  # resolved lazily to avoid hard dependency
+_EMBEDDER: Optional[object] = None
 _INDEX: List[Tuple[str, List[float]]] | None = None
 
 
@@ -17,7 +17,7 @@ def _get_embedder() -> Optional[object]:
     if _EMBEDDER is not None:
         return _EMBEDDER
     try:
-        from langchain_community.embeddings import OllamaEmbeddings  # type: ignore
+        from langchain_community.embeddings import OllamaEmbeddings
         _EMBEDDER = OllamaEmbeddings(model="nomic-embed-text")
     except Exception:
         _EMBEDDER = None
@@ -50,7 +50,6 @@ def add_texts(texts: List[str]) -> None:
     index = _load_index()
     emb = _get_embedder()
     if emb is None:
-        # store texts without embeddings so retriever returns empty until embeddings available
         for t in texts:
             index.append((t, []))
     else:

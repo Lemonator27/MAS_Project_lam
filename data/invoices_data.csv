@@ -1,0 +1,101 @@
+invoice_id,vendor,invoice_date,due_date,amount,invoice_type,payment_terms,status,is_overdue,description,po_number,approval_required,approved_by
+INV_000001,Ultimate Systems,2025-04-17,2025-05-02,5735.13,hardware,Net 15,pending,True,Services provided by Ultimate Systems,PO_8381,0,
+INV_000002,Prime Services,2025-08-23,2025-09-22,2819.78,maintenance,Net 30,disputed,False,Services provided by Prime Services,PO_3827,0,
+INV_000003,Digital Partners,2025-09-08,2025-09-08,3944.07,maintenance,Due on Receipt,overdue,True,Services provided by Digital Partners,PO_9586,0,
+INV_000004,Professional Services Co,2025-05-08,2025-06-22,967.3,consulting,Net 45,paid,False,Services provided by Professional Services Co,PO_7347,0,Manager_14
+INV_000005,Global Services Inc,2025-06-24,2025-08-08,34397.94,maintenance,Net 45,pending,True,Services provided by Global Services Inc,PO_6401,1,
+INV_000006,Enterprise Solutions,2025-08-25,2025-10-09,3392.16,consulting,Net 45,cancelled,False,Services provided by Enterprise Solutions,PO_3463,0,
+INV_000007,Premier Consulting,2025-06-25,2025-07-10,3325.56,hardware,Net 15,paid,False,Services provided by Premier Consulting,PO_6082,0,Manager_13
+INV_000008,Premier Consulting,2025-08-16,2025-10-15,6159.6,consulting,Net 60,overdue,False,Services provided by Premier Consulting,PO_6381,0,
+INV_000009,Premier Consulting,2025-08-17,2025-08-17,4822.31,maintenance,Due on Receipt,disputed,True,Services provided by Premier Consulting,PO_6928,0,
+INV_000010,Superior Systems,2025-09-14,2025-09-29,3728.96,consulting,Net 15,approved,False,Services provided by Superior Systems,PO_6598,0,Manager_16
+INV_000011,Digital Partners,2025-07-31,2025-08-15,1352.25,products,Net 15,pending,True,Services provided by Digital Partners,PO_5846,0,
+INV_000012,Global Services Inc,2025-08-24,2025-10-08,4776.52,maintenance,Net 45,disputed,False,Services provided by Global Services Inc,PO_3147,0,
+INV_000013,Enterprise Solutions,2025-04-19,2025-05-04,19575.31,products,Net 15,approved,True,Services provided by Enterprise Solutions,PO_3712,1,Manager_15
+INV_000014,Premium Technologies,2025-09-07,2025-09-22,11446.28,consulting,Net 15,overdue,False,Services provided by Premium Technologies,PO_5668,1,
+INV_000015,Digital Partners,2025-05-27,2025-06-11,14664.53,hardware,Net 15,paid,False,Services provided by Digital Partners,PO_8684,1,Manager_7
+INV_000016,Master Services,2025-06-16,2025-07-31,1787.88,software,Net 45,overdue,True,Services provided by Master Services,PO_9239,0,
+INV_000017,Premium Technologies,2025-05-06,2025-05-21,1108.09,products,Net 15,disputed,True,Services provided by Premium Technologies,PO_3267,0,
+INV_000018,Global Services Inc,2025-07-16,2025-07-16,2628.62,maintenance,Due on Receipt,paid,False,Services provided by Global Services Inc,PO_2680,0,Manager_17
+INV_000019,Excellence Corp,2025-08-18,2025-09-02,3151.79,services,Net 15,paid,False,Services provided by Excellence Corp,PO_8361,0,Manager_17
+INV_000020,Premium Technologies,2025-08-12,2025-08-27,8903.43,services,Net 15,overdue,True,Services provided by Premium Technologies,PO_6727,0,
+INV_000021,Premium Technologies,2025-09-12,2025-09-12,548.69,services,Due on Receipt,disputed,True,Services provided by Premium Technologies,PO_7126,0,
+INV_000022,Enterprise Solutions,2025-07-20,2025-09-03,13760.4,services,Net 45,approved,True,Services provided by Enterprise Solutions,PO_1461,1,Manager_11
+INV_000023,Prime Services,2025-08-24,2025-09-08,2545.27,products,Net 15,pending,True,Services provided by Prime Services,PO_5700,0,
+INV_000024,Advanced Technologies,2025-05-21,2025-05-21,1945.2,maintenance,Due on Receipt,overdue,True,Services provided by Advanced Technologies,PO_1086,0,
+INV_000025,TechCorp Solutions,2025-08-29,2025-09-13,1083.44,consulting,Net 15,approved,True,Services provided by TechCorp Solutions,PO_9991,0,Manager_20
+INV_000026,Premium Technologies,2025-05-06,2025-06-20,569.72,services,Net 45,approved,True,Services provided by Premium Technologies,PO_5934,0,Manager_4
+INV_000027,Digital Partners,2025-09-06,2025-11-05,6789.76,software,Net 60,overdue,False,Services provided by Digital Partners,PO_2029,0,
+INV_000028,Ultimate Systems,2025-08-21,2025-10-20,3207.73,hardware,Net 60,pending,False,Services provided by Ultimate Systems,PO_9443,0,
+INV_000029,Digital Partners,2025-04-24,2025-05-09,820.6,maintenance,Net 15,paid,False,Services provided by Digital Partners,PO_8032,0,Manager_1
+INV_000030,Superior Systems,2025-04-14,2025-06-13,816.41,products,Net 60,overdue,True,Services provided by Superior Systems,PO_4068,0,
+INV_000031,Premier Consulting,2025-04-01,2025-05-16,2130.72,hardware,Net 45,pending,True,Services provided by Premier Consulting,PO_9618,0,
+INV_000032,TechCorp Solutions,2025-05-02,2025-05-02,15819.86,software,Due on Receipt,pending,True,Services provided by TechCorp Solutions,PO_7338,1,
+INV_000033,Strategic Solutions,2025-06-15,2025-07-15,2299.41,maintenance,Net 30,paid,False,Services provided by Strategic Solutions,PO_2106,0,Manager_12
+INV_000034,Elite Systems,2025-07-19,2025-09-02,663.05,hardware,Net 45,approved,True,Services provided by Elite Systems,PO_1726,0,Manager_12
+INV_000035,Prime Services,2025-05-02,2025-05-17,2331.48,maintenance,Net 15,cancelled,False,Services provided by Prime Services,PO_8612,0,
+INV_000036,Ultimate Systems,2025-03-24,2025-04-08,2269.41,maintenance,Net 15,approved,True,Services provided by Ultimate Systems,PO_2033,0,Manager_15
+INV_000037,Excellence Corp,2025-09-09,2025-10-09,200.96,products,Net 30,approved,False,Services provided by Excellence Corp,PO_1686,0,Manager_11
+INV_000038,Enterprise Solutions,2025-07-01,2025-07-01,2823.42,hardware,Due on Receipt,paid,False,Services provided by Enterprise Solutions,PO_1599,0,Manager_7
+INV_000039,Superior Systems,2025-07-07,2025-08-21,2366.26,services,Net 45,paid,False,Services provided by Superior Systems,PO_3039,0,Manager_12
+INV_000040,Enterprise Solutions,2025-05-30,2025-05-30,5980.18,maintenance,Due on Receipt,overdue,True,Services provided by Enterprise Solutions,PO_6554,0,
+INV_000041,Ultimate Systems,2025-08-02,2025-08-02,18938.57,maintenance,Due on Receipt,paid,False,Services provided by Ultimate Systems,PO_9507,1,Manager_9
+INV_000042,Premium Technologies,2025-08-28,2025-08-28,9196.38,services,Due on Receipt,disputed,True,Services provided by Premium Technologies,PO_3956,0,
+INV_000043,Excellence Corp,2025-05-02,2025-06-01,2278.13,consulting,Net 30,pending,True,Services provided by Excellence Corp,PO_6372,0,
+INV_000044,Excellence Corp,2025-04-02,2025-04-02,985.82,consulting,Due on Receipt,disputed,True,Services provided by Excellence Corp,PO_7981,0,
+INV_000045,Master Services,2025-08-07,2025-08-07,39079.75,consulting,Due on Receipt,pending,True,Services provided by Master Services,PO_6776,1,
+INV_000046,Premium Technologies,2025-04-14,2025-05-14,3162.82,consulting,Net 30,pending,True,Services provided by Premium Technologies,PO_7655,0,
+INV_000047,Professional Services Co,2025-06-17,2025-07-02,3022.77,services,Net 15,disputed,True,Services provided by Professional Services Co,PO_8179,0,
+INV_000048,Advanced Technologies,2025-09-10,2025-09-25,2909.9,services,Net 15,cancelled,False,Services provided by Advanced Technologies,PO_7001,0,
+INV_000049,Enterprise Solutions,2025-06-18,2025-07-18,3633.98,hardware,Net 30,disputed,True,Services provided by Enterprise Solutions,PO_3513,0,
+INV_000050,Master Services,2025-03-29,2025-05-13,2580.24,consulting,Net 45,overdue,True,Services provided by Master Services,PO_2259,0,
+INV_000051,Advanced Technologies,2025-04-25,2025-06-09,1679.65,hardware,Net 45,overdue,True,Services provided by Advanced Technologies,PO_6150,0,
+INV_000052,Strategic Solutions,2025-04-05,2025-05-05,1725.27,products,Net 30,pending,True,Services provided by Strategic Solutions,PO_4048,0,
+INV_000053,Enterprise Solutions,2025-05-14,2025-06-13,2884.9,hardware,Net 30,paid,False,Services provided by Enterprise Solutions,PO_5264,0,Manager_15
+INV_000054,Excellence Corp,2025-07-26,2025-07-26,1731.21,maintenance,Due on Receipt,approved,True,Services provided by Excellence Corp,PO_3009,0,Manager_5
+INV_000055,Master Services,2025-08-31,2025-08-31,1461.41,products,Due on Receipt,pending,True,Services provided by Master Services,PO_6236,0,
+INV_000056,Superior Systems,2025-04-01,2025-05-01,3315.72,maintenance,Net 30,disputed,True,Services provided by Superior Systems,PO_9882,0,
+INV_000057,Excellence Corp,2025-07-06,2025-07-21,2310.05,products,Net 15,paid,False,Services provided by Excellence Corp,PO_9335,0,Manager_8
+INV_000058,Innovation Labs,2025-08-18,2025-09-02,13413.18,products,Net 15,overdue,True,Services provided by Innovation Labs,PO_1430,1,
+INV_000059,Superior Systems,2025-06-18,2025-08-17,210.4,software,Net 60,approved,True,Services provided by Superior Systems,PO_2412,0,Manager_3
+INV_000060,Enterprise Solutions,2025-07-01,2025-07-01,8879.56,maintenance,Due on Receipt,disputed,True,Services provided by Enterprise Solutions,PO_7730,0,
+INV_000061,Premier Consulting,2025-06-06,2025-07-21,10363.91,products,Net 45,cancelled,False,Services provided by Premier Consulting,PO_2215,1,
+INV_000062,Master Services,2025-05-26,2025-07-25,374.88,maintenance,Net 60,paid,False,Services provided by Master Services,PO_3102,0,Manager_18
+INV_000063,Professional Services Co,2025-04-08,2025-04-08,2116.06,products,Due on Receipt,disputed,True,Services provided by Professional Services Co,PO_1907,0,
+INV_000064,Advanced Technologies,2025-08-18,2025-09-02,2056.09,consulting,Net 15,approved,True,Services provided by Advanced Technologies,PO_6286,0,Manager_8
+INV_000065,Excellence Corp,2025-06-22,2025-08-06,729.59,services,Net 45,approved,True,Services provided by Excellence Corp,PO_5496,0,Manager_5
+INV_000066,Excellence Corp,2025-04-11,2025-06-10,1369.48,hardware,Net 60,pending,True,Services provided by Excellence Corp,PO_9234,0,
+INV_000067,Professional Services Co,2025-04-07,2025-06-06,981.84,hardware,Net 60,approved,True,Services provided by Professional Services Co,PO_3804,0,Manager_20
+INV_000068,Prime Services,2025-04-17,2025-05-17,17193.22,hardware,Net 30,pending,True,Services provided by Prime Services,PO_2330,1,
+INV_000069,Strategic Solutions,2025-09-07,2025-09-22,7598.29,maintenance,Net 15,disputed,False,Services provided by Strategic Solutions,PO_7825,0,
+INV_000070,TechCorp Solutions,2025-04-13,2025-06-12,10631.27,software,Net 60,paid,False,Services provided by TechCorp Solutions,PO_5949,1,Manager_16
+INV_000071,Enterprise Solutions,2025-07-18,2025-07-18,6134.43,consulting,Due on Receipt,pending,True,Services provided by Enterprise Solutions,PO_1981,0,
+INV_000072,Master Services,2025-08-09,2025-08-09,963.86,software,Due on Receipt,overdue,True,Services provided by Master Services,PO_4342,0,
+INV_000073,Advanced Technologies,2025-06-23,2025-08-07,1764.25,consulting,Net 45,cancelled,False,Services provided by Advanced Technologies,PO_6658,0,
+INV_000074,Advanced Technologies,2025-06-08,2025-08-07,4862.82,consulting,Net 60,disputed,True,Services provided by Advanced Technologies,PO_2739,0,
+INV_000075,Digital Partners,2025-06-29,2025-07-29,878.2,software,Net 30,paid,False,Services provided by Digital Partners,PO_8366,0,Manager_8
+INV_000076,Elite Systems,2025-08-13,2025-09-27,6081.45,services,Net 45,overdue,False,Services provided by Elite Systems,PO_7850,0,
+INV_000077,Professional Services Co,2025-07-17,2025-09-15,2344.14,consulting,Net 60,cancelled,False,Services provided by Professional Services Co,PO_6123,0,
+INV_000078,Professional Services Co,2025-08-01,2025-09-30,2049.15,software,Net 60,overdue,False,Services provided by Professional Services Co,PO_9171,0,
+INV_000079,Ultimate Systems,2025-07-02,2025-08-01,6069.07,services,Net 30,overdue,True,Services provided by Ultimate Systems,PO_9281,0,
+INV_000080,Digital Partners,2025-05-24,2025-07-23,4648.33,products,Net 60,paid,False,Services provided by Digital Partners,PO_1797,0,Manager_2
+INV_000081,Ultimate Systems,2025-07-08,2025-07-08,2077.74,hardware,Due on Receipt,paid,False,Services provided by Ultimate Systems,PO_9793,0,Manager_1
+INV_000082,Premium Technologies,2025-08-22,2025-10-06,9502.69,products,Net 45,cancelled,False,Services provided by Premium Technologies,PO_6992,0,
+INV_000083,Superior Systems,2025-06-07,2025-06-07,1011.24,services,Due on Receipt,pending,True,Services provided by Superior Systems,PO_4189,0,
+INV_000084,Excellence Corp,2025-06-18,2025-06-18,5518.91,services,Due on Receipt,disputed,True,Services provided by Excellence Corp,PO_8378,0,
+INV_000085,Strategic Solutions,2025-05-01,2025-06-30,5394.32,hardware,Net 60,pending,True,Services provided by Strategic Solutions,PO_3108,0,
+INV_000086,Enterprise Solutions,2025-08-25,2025-10-09,2187.37,consulting,Net 45,disputed,False,Services provided by Enterprise Solutions,PO_6990,0,
+INV_000087,Innovation Labs,2025-08-13,2025-10-12,4130.41,hardware,Net 60,overdue,False,Services provided by Innovation Labs,PO_9193,0,
+INV_000088,Global Services Inc,2025-09-08,2025-09-23,853.11,services,Net 15,cancelled,False,Services provided by Global Services Inc,PO_6456,0,
+INV_000089,Master Services,2025-05-20,2025-07-19,7510.27,products,Net 60,disputed,True,Services provided by Master Services,PO_3290,0,
+INV_000090,Prime Services,2025-06-27,2025-06-27,2477.73,products,Due on Receipt,disputed,True,Services provided by Prime Services,PO_5902,0,
+INV_000091,Prime Services,2025-04-20,2025-06-19,1767.42,hardware,Net 60,disputed,True,Services provided by Prime Services,PO_9025,0,
+INV_000092,Excellence Corp,2025-04-27,2025-05-27,8510.1,software,Net 30,paid,False,Services provided by Excellence Corp,PO_6427,0,Manager_4
+INV_000093,Excellence Corp,2025-06-04,2025-07-04,1473.88,maintenance,Net 30,disputed,True,Services provided by Excellence Corp,PO_8775,0,
+INV_000094,Digital Partners,2025-07-13,2025-08-12,728.9,maintenance,Net 30,disputed,True,Services provided by Digital Partners,PO_8871,0,
+INV_000095,Enterprise Solutions,2025-08-06,2025-08-21,628.52,products,Net 15,pending,True,Services provided by Enterprise Solutions,PO_2800,0,
+INV_000096,TechCorp Solutions,2025-08-01,2025-09-15,5464.4,software,Net 45,overdue,True,Services provided by TechCorp Solutions,PO_3481,0,
+INV_000097,Innovation Labs,2025-06-05,2025-08-04,828.46,software,Net 60,disputed,True,Services provided by Innovation Labs,PO_8726,0,
+INV_000098,Advanced Technologies,2025-09-03,2025-09-18,17236.67,hardware,Net 15,disputed,True,Services provided by Advanced Technologies,PO_6325,1,
+INV_000099,Ultimate Systems,2025-04-02,2025-04-02,371.69,hardware,Due on Receipt,paid,False,Services provided by Ultimate Systems,PO_3837,0,Manager_15
+INV_000100,Prime Services,2025-05-05,2025-06-19,16259.89,hardware,Net 45,cancelled,False,Services provided by Prime Services,PO_5331,1,

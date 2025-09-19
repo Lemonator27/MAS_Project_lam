@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def summarize_subscriptions(csv_path: str = "data/transactions.csv") -> pd.DataFrame:
+def summarize_subscriptions(csv_path: str = "data/transactions_extended.csv") -> pd.DataFrame:
     try:
         df = pd.read_csv(csv_path)
     except Exception:

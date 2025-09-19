@@ -1,0 +1,101 @@
+transaction_id,amount,date,category,merchant,employee_id,fraud_flag,description,payment_method,currency,status,approval_required
+TXN_000001,951.26,2024-10-31,hardware,Microsoft Store,EMP_092,0,Payment to Microsoft Store for hardware,bank_transfer,USD,completed,0
+TXN_000002,14196.98,2024-10-18,payroll,Amazon Web Services,EMP_100,0,Payment to Amazon Web Services for payroll,cash,USD,completed,1
+TXN_000003,23933.9,2024-12-07,payroll,Twitter Ads,EMP_059,0,Payment to Twitter Ads for payroll,check,USD,pending,1
+TXN_000004,1907.98,2024-11-09,training,Office Depot,EMP_071,0,Payment to Office Depot for training,cash,USD,pending,0
+TXN_000005,167.73,2025-05-09,legal,Twitter Ads,EMP_099,0,Payment to Twitter Ads for legal,bank_transfer,USD,pending,0
+TXN_000006,260.39,2025-02-05,insurance,Zoom,EMP_031,0,Payment to Zoom for insurance,credit_card,USD,completed,0
+TXN_000007,1113.25,2025-07-03,entertainment,Facebook Ads,EMP_089,0,Payment to Facebook Ads for entertainment,cash,USD,pending,0
+TXN_000008,1111.86,2025-04-02,conference,Best Buy,EMP_054,0,Payment to Best Buy for conference,cash,USD,failed,0
+TXN_000009,1113.26,2024-09-27,entertainment,Microsoft Azure,EMP_062,1,Payment to Microsoft Azure for entertainment,cash,USD,pending,0
+TXN_000010,31342.54,2024-12-17,consulting,Best Buy,EMP_063,0,Payment to Best Buy for consulting,credit_card,USD,pending,1
+TXN_000011,1177.2,2025-03-30,entertainment,Basecamp,EMP_093,0,Payment to Basecamp for entertainment,bank_transfer,USD,failed,0
+TXN_000012,16385.77,2024-12-19,entertainment,Microsoft Azure,EMP_076,0,Payment to Microsoft Azure for entertainment,cash,USD,completed,1
+TXN_000013,1383.4,2025-01-25,travel,Shopify,EMP_034,0,Payment to Shopify for travel,check,USD,pending,0
+TXN_000014,793.28,2025-03-08,training,Uber,EMP_033,0,Payment to Uber for training,credit_card,USD,pending,0
+TXN_000015,3443.74,2025-05-27,marketing,Monday.com,EMP_100,0,Payment to Monday.com for marketing,credit_card,USD,completed,0
+TXN_000016,148.3,2025-06-08,office_supplies,Microsoft Azure,EMP_031,0,Payment to Microsoft Azure for office_supplies,bank_transfer,USD,pending,0
+TXN_000017,409.38,2024-09-25,meals,TikTok Ads,EMP_022,0,Payment to TikTok Ads for meals,credit_card,USD,completed,0
+TXN_000018,437.85,2025-04-12,subscription,Adobe Creative Suite,EMP_040,0,Payment to Adobe Creative Suite for subscription,cash,USD,pending,0
+TXN_000019,6732.21,2025-06-09,consulting,Zoom,EMP_014,0,Payment to Zoom for consulting,credit_card,USD,failed,1
+TXN_000020,102.79,2025-08-28,training,Marriott,EMP_085,0,Payment to Marriott for training,check,USD,completed,0
+TXN_000021,16094.94,2025-02-15,payroll,Pizza Hut,EMP_056,0,Payment to Pizza Hut for payroll,cash,USD,failed,1
+TXN_000022,132.59,2025-07-02,software,Starbucks,EMP_094,0,Payment to Starbucks for software,cash,USD,pending,0
+TXN_000023,414.91,2025-02-07,legal,GitHub,EMP_042,0,Payment to GitHub for legal,credit_card,USD,pending,0
+TXN_000024,1976.24,2025-01-31,conference,Twitter Ads,EMP_073,0,Payment to Twitter Ads for conference,credit_card,USD,pending,0
+TXN_000025,709.3,2025-04-05,advertising,Shopify,EMP_028,0,Payment to Shopify for advertising,check,USD,failed,0
+TXN_000026,1152.02,2024-09-24,subscription,Uber,EMP_067,0,Payment to Uber for subscription,cash,USD,pending,0
+TXN_000027,1152.37,2024-12-08,advertising,Twitter Ads,EMP_083,0,Payment to Twitter Ads for advertising,credit_card,USD,completed,0
+TXN_000028,186.63,2025-04-21,entertainment,Facebook Ads,EMP_089,0,Payment to Facebook Ads for entertainment,check,USD,pending,0
+TXN_000029,7252.02,2024-12-09,meals,Staples,EMP_055,0,Payment to Staples for meals,check,USD,failed,1
+TXN_000030,4202.41,2025-01-29,insurance,Uber,EMP_033,0,Payment to Uber for insurance,check,USD,completed,0
+TXN_000031,2600.44,2024-12-18,hardware,Shopify,EMP_028,0,Payment to Shopify for hardware,check,USD,completed,0
+TXN_000032,14977.47,2025-06-11,consulting,Lyft,EMP_047,0,Payment to Lyft for consulting,bank_transfer,USD,pending,1
+TXN_000033,87.78,2025-08-26,insurance,Slack,EMP_090,0,Payment to Slack for insurance,cash,USD,completed,0
+TXN_000034,801.48,2025-09-12,insurance,Microsoft Store,EMP_061,0,Payment to Microsoft Store for insurance,credit_card,USD,pending,0
+TXN_000035,1537.96,2025-01-17,marketing,Salesforce,EMP_052,0,Payment to Salesforce for marketing,credit_card,USD,completed,0
+TXN_000036,1559.99,2025-07-04,insurance,Microsoft Store,EMP_011,0,Payment to Microsoft Store for insurance,cash,USD,failed,0
+TXN_000037,301.11,2024-11-17,consulting,Trello,EMP_100,0,Payment to Trello for consulting,cash,USD,pending,0
+TXN_000038,593.04,2024-11-21,insurance,Starbucks,EMP_073,0,Payment to Starbucks for insurance,credit_card,USD,completed,0
+TXN_000039,1102.12,2024-11-02,legal,Google Ads,EMP_085,0,Payment to Google Ads for legal,credit_card,USD,completed,0
+TXN_000040,1580.91,2025-09-17,conference,Booking.com,EMP_089,0,Payment to Booking.com for conference,bank_transfer,USD,pending,0
+TXN_000041,200.28,2024-09-22,conference,Lyft,EMP_010,0,Payment to Lyft for conference,bank_transfer,USD,pending,0
+TXN_000042,476.04,2025-07-22,consulting,Best Buy,EMP_083,0,Payment to Best Buy for consulting,bank_transfer,USD,completed,0
+TXN_000043,413.66,2025-08-19,insurance,PayPal,EMP_077,0,Payment to PayPal for insurance,check,USD,pending,0
+TXN_000044,346.08,2025-07-17,insurance,Subway,EMP_090,0,Payment to Subway for insurance,cash,USD,pending,0
+TXN_000045,6408.97,2025-08-08,travel,Atlassian,EMP_056,0,Payment to Atlassian for travel,credit_card,USD,completed,1
+TXN_000046,604.85,2025-05-24,subscription,Microsoft Store,EMP_098,0,Payment to Microsoft Store for subscription,credit_card,USD,completed,0
+TXN_000047,188.5,2025-01-21,conference,Staples,EMP_036,0,Payment to Staples for conference,cash,USD,completed,0
+TXN_000048,1665.47,2025-01-21,training,Marriott,EMP_043,0,Payment to Marriott for training,bank_transfer,USD,pending,0
+TXN_000049,5553.35,2025-02-20,insurance,Pizza Hut,EMP_085,0,Payment to Pizza Hut for insurance,credit_card,USD,pending,1
+TXN_000050,1867.7,2025-08-04,legal,United Airlines,EMP_042,0,Payment to United Airlines for legal,credit_card,USD,failed,0
+TXN_000051,145.57,2024-12-15,training,Subway,EMP_007,0,Payment to Subway for training,cash,USD,failed,0
+TXN_000052,409.84,2025-02-04,hardware,Slack,EMP_035,0,Payment to Slack for hardware,cash,USD,failed,0
+TXN_000053,1432.12,2025-01-13,subscription,Salesforce,EMP_081,0,Payment to Salesforce for subscription,bank_transfer,USD,pending,0
+TXN_000054,327.78,2024-12-10,training,Amazon Web Services,EMP_012,0,Payment to Amazon Web Services for training,credit_card,USD,pending,0
+TXN_000055,1036.72,2025-07-20,office_supplies,Monday.com,EMP_064,0,Payment to Monday.com for office_supplies,check,USD,pending,0
+TXN_000056,1443.22,2025-01-14,consulting,Chipotle,EMP_059,0,Payment to Chipotle for consulting,bank_transfer,USD,completed,0
+TXN_000057,1695.61,2025-04-30,utilities,Booking.com,EMP_065,0,Payment to Booking.com for utilities,check,USD,failed,0
+TXN_000058,626.7,2024-11-26,advertising,Basecamp,EMP_020,0,Payment to Basecamp for advertising,check,USD,failed,0
+TXN_000059,182.19,2024-12-14,conference,Airbnb,EMP_042,0,Payment to Airbnb for conference,bank_transfer,USD,failed,0
+TXN_000060,598.77,2025-03-06,training,Facebook Ads,EMP_006,0,Payment to Facebook Ads for training,cash,USD,pending,0
+TXN_000061,90.47,2024-10-14,office_supplies,Monday.com,EMP_064,0,Payment to Monday.com for office_supplies,check,USD,completed,0
+TXN_000062,181.24,2025-02-05,conference,Adobe Creative Suite,EMP_002,0,Payment to Adobe Creative Suite for conference,bank_transfer,USD,completed,0
+TXN_000063,3112.15,2025-01-21,utilities,TikTok Ads,EMP_080,0,Payment to TikTok Ads for utilities,check,USD,failed,0
+TXN_000064,2498.05,2024-12-19,utilities,Airbnb,EMP_081,0,Payment to Airbnb for utilities,credit_card,USD,failed,0
+TXN_000065,584.99,2025-08-14,insurance,Twitter Ads,EMP_030,0,Payment to Twitter Ads for insurance,credit_card,USD,failed,0
+TXN_000066,417.52,2024-09-23,conference,Adobe Creative Suite,EMP_022,0,Payment to Adobe Creative Suite for conference,credit_card,USD,pending,0
+TXN_000067,705.22,2025-08-21,meals,Lyft,EMP_048,0,Payment to Lyft for meals,cash,USD,failed,0
+TXN_000068,6960.43,2024-10-04,software,Shopify,EMP_023,0,Payment to Shopify for software,bank_transfer,USD,pending,1
+TXN_000069,997.22,2024-11-24,consulting,Stripe,EMP_060,0,Payment to Stripe for consulting,credit_card,USD,pending,0
+TXN_000070,1651.99,2025-04-24,software,Best Buy,EMP_010,0,Payment to Best Buy for software,check,USD,failed,0
+TXN_000071,543.24,2025-02-13,conference,TikTok Ads,EMP_039,0,Payment to TikTok Ads for conference,cash,USD,completed,0
+TXN_000072,706.91,2025-05-20,meals,Airbnb,EMP_074,0,Payment to Airbnb for meals,credit_card,USD,failed,0
+TXN_000073,770.59,2025-02-28,subscription,Uber,EMP_073,0,Payment to Uber for subscription,credit_card,USD,failed,0
+TXN_000074,754.53,2025-01-07,consulting,Lyft,EMP_078,0,Payment to Lyft for consulting,bank_transfer,USD,failed,0
+TXN_000075,99.75,2025-05-13,office_supplies,Basecamp,EMP_081,0,Payment to Basecamp for office_supplies,credit_card,USD,pending,0
+TXN_000076,2393.57,2025-02-05,meals,Google Cloud,EMP_094,0,Payment to Google Cloud for meals,check,USD,failed,0
+TXN_000077,359.55,2025-02-18,hardware,Shopify,EMP_017,0,Payment to Shopify for hardware,check,USD,failed,0
+TXN_000078,5493.48,2025-01-05,software,Uber,EMP_033,0,Payment to Uber for software,check,USD,failed,1
+TXN_000079,1321.93,2025-03-29,conference,Salesforce,EMP_010,0,Payment to Salesforce for conference,cash,USD,failed,0
+TXN_000080,714.06,2025-03-15,entertainment,Notion,EMP_002,0,Payment to Notion for entertainment,check,USD,failed,0
+TXN_000081,1032.08,2024-10-09,entertainment,TikTok Ads,EMP_082,0,Payment to TikTok Ads for entertainment,bank_transfer,USD,pending,0
+TXN_000082,5572.13,2025-09-06,utilities,Trello,EMP_079,0,Payment to Trello for utilities,cash,USD,failed,1
+TXN_000083,880.94,2025-04-17,training,Monday.com,EMP_015,0,Payment to Monday.com for training,check,USD,pending,0
+TXN_000084,356.84,2025-07-21,consulting,Adobe Creative Suite,EMP_069,0,Payment to Adobe Creative Suite for consulting,cash,USD,failed,0
+TXN_000085,6580.58,2025-07-01,payroll,Booking.com,EMP_063,0,Payment to Booking.com for payroll,check,USD,completed,1
+TXN_000086,406.26,2024-09-30,hardware,Hilton,EMP_057,0,Payment to Hilton for hardware,check,USD,completed,0
+TXN_000087,368.94,2024-10-02,meals,Hilton,EMP_008,0,Payment to Hilton for meals,credit_card,USD,pending,0
+TXN_000088,1555.58,2025-08-03,hardware,Basecamp,EMP_083,0,Payment to Basecamp for hardware,credit_card,USD,pending,0
+TXN_000089,950.53,2025-05-17,hardware,HubSpot,EMP_009,0,Payment to HubSpot for hardware,bank_transfer,USD,completed,0
+TXN_000090,201.76,2025-04-03,subscription,Stripe,EMP_036,0,Payment to Stripe for subscription,bank_transfer,USD,failed,0
+TXN_000091,19922.4,2025-05-13,payroll,Shopify,EMP_085,0,Payment to Shopify for payroll,check,USD,completed,1
+TXN_000092,548.56,2024-11-21,subscription,United Airlines,EMP_023,0,Payment to United Airlines for subscription,cash,USD,failed,0
+TXN_000093,1499.46,2025-07-22,advertising,Zoom,EMP_058,0,Payment to Zoom for advertising,credit_card,USD,pending,0
+TXN_000094,2058.29,2025-01-04,travel,Facebook Ads,EMP_094,0,Payment to Facebook Ads for travel,check,USD,pending,0
+TXN_000095,478.67,2024-10-24,travel,Microsoft Azure,EMP_062,0,Payment to Microsoft Azure for travel,credit_card,USD,pending,0
+TXN_000096,1702.44,2024-09-19,marketing,McDonald's,EMP_011,0,Payment to McDonald's for marketing,bank_transfer,USD,pending,0
+TXN_000097,1404.3,2024-11-03,utilities,Asana,EMP_049,0,Payment to Asana for utilities,cash,USD,failed,0
+TXN_000098,14918.69,2024-11-13,payroll,Starbucks,EMP_090,0,Payment to Starbucks for payroll,bank_transfer,USD,pending,1
+TXN_000099,651.38,2025-01-30,training,Facebook Ads,EMP_044,0,Payment to Facebook Ads for training,credit_card,USD,pending,0
+TXN_000100,747.94,2025-02-12,legal,United Airlines,EMP_048,0,Payment to United Airlines for legal,cash,USD,completed,0
