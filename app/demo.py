@@ -49,19 +49,7 @@ with col5:
     - Theo dõi thanh toán
     """)
 
-# Example queries
-st.markdown("**Ví dụ câu hỏi để test:**")
-example_queries = [
-    "Phân tích dòng tiền hiện tại",
-    "Hóa đơn nào đang quá hạn?",
-    "So sánh budget marketing tháng này",
-    "Chi tiêu subscription theo vendor",
-    "Phát hiện giao dịch bất thường"
-]
-
-selected_query = st.selectbox("Hoặc chọn câu hỏi mẫu:", [""] + example_queries)
-
-query = st.text_input("Nhập câu hỏi của bạn:", value=selected_query if selected_query else "")
+query = st.text_input("Nhập câu hỏi của bạn:", value="")
 if st.button("Run") and query:
     state = mas_app.invoke({"messages": [{"role": "user", "content": query}]})
     out = state.get("result", {})

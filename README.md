@@ -74,8 +74,3 @@ Dữ liệu
 - `data/cashflow_data.csv`: 100 ngày dữ liệu dòng tiền
 - `data/invoices_data.csv`: 100 hóa đơn với payment tracking
 - `data/rag_documents.json`: 100 policy documents cho RAG
-
-Phát triển thêm
-- Có thể thêm Cost Optimization Agent cho đề xuất cắt giảm chi phí.
-- Có thể tích hợp real-time data từ ERP/banking APIs.
-- Có thể chuyển retriever JSON sang vector DB khi scale.
