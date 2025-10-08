@@ -1,93 +1,122 @@
 import pandas as pd
 from typing import Dict, Any
-from datetime import datetime, timedelta
+from langchain.agents import AgentExecutor, create_react_agent
+from langchain.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
+from langchain.tools import tool
+import os
+from dotenv import load_dotenv
+
+# Make sure to load your environment variables
+load_dotenv()
+
+# --- Data Loading and Analysis Functions (largely unchanged) ---
 
 def load_invoice_data(path: str = "data/invoices_data.csv") -> pd.DataFrame:
-    """Load invoice data"""
+    """Load invoice data from a CSV file."""
     try:
         df = pd.read_csv(path)
         df['invoice_date'] = pd.to_datetime(df['invoice_date'])
         df['due_date'] = pd.to_datetime(df['due_date'])
         return df
-    except Exception:
-        # Fallback data
+    except FileNotFoundError:
+        # Fallback data if the file doesn't exist
+        print("CSV file not found. Using fallback data.")
         return pd.DataFrame({
-            "invoice_id": ["INV_001", "INV_002"],
-            "vendor": ["Vendor A", "Vendor B"],
-            "amount": [1000, 2000],
-            "status": ["pending", "paid"],
-            "is_overdue": [False, False]
+            "invoice_id": ["INV_001", "INV_002", "INV_003"],
+            "vendor": ["Vendor A", "Vendor B", "Vendor A"],
+            "amount": [1500.75, 2500.00, 850.50],
+            "status": ["pending", "paid", "overdue"],
+            "is_overdue": [False, False, True],
+            "payment_terms": ["Net 30", "Net 60", "Net 30"],
+            "invoice_date": [pd.to_datetime("2025-09-15"), pd.to_datetime("2025-09-20"), pd.to_datetime("2025-08-10")],
+            "due_date": [pd.to_datetime("2025-10-15"), pd.to_datetime("2025-11-19"), pd.to_datetime("2025-09-09")]
         })
 
-def analyze_invoice_status(df: pd.DataFrame) -> str:
-    """Analyze invoice status and overdue payments"""
+@tool
+def analyze_all_invoices(query: str) -> str:
+    """
+    Analyzes the entire invoice dataset and provides a comprehensive summary.
+    Use this tool when the user asks for a general overview, a report, or a full analysis of invoices.
+    The 'query' argument is not used to filter data but is required by the agent.
+    """
+    df = load_invoice_data()
     if df.empty:
         return "Không có dữ liệu hóa đơn để phân tích."
     
-    # Calculate statistics
+    # --- Analysis logic (same as your original code) ---
     total_invoices = len(df)
-    pending_invoices = len(df[df['status'] == 'pending'])
-    paid_invoices = len(df[df['status'] == 'paid'])
-    overdue_invoices = len(df[df['is_overdue'] == True])
+    pending_invoices = df[df['status'].isin(['pending', 'overdue'])].shape[0]
+    paid_invoices = df[df['status'] == 'paid'].shape[0]
+    overdue_invoices = df[df['is_overdue'] == True].shape[0]
     
     total_amount = df['amount'].sum()
-    pending_amount = df[df['status'] == 'pending']['amount'].sum()
+    pending_amount = df[df['status'].isin(['pending', 'overdue'])]['amount'].sum()
+    paid_amount = df[df['status'] == 'paid']['amount'].sum()
     overdue_amount = df[df['is_overdue'] == True]['amount'].sum()
     
-    # Vendor analysis
-    vendor_summary = df.groupby('vendor').agg({
-        'amount': ['sum', 'count'],
-        'status': lambda x: (x == 'pending').sum()
-    }).round(2)
+    vendor_summary = df.groupby('vendor').agg(
+        total_amount=('amount', 'sum'),
+        invoice_count=('invoice_id', 'count')
+    ).sort_values('total_amount', ascending=False).round(2)
     
-    vendor_summary.columns = ['total_amount', 'invoice_count', 'pending_count']
-    top_vendors = vendor_summary.sort_values('total_amount', ascending=False).head(5)
-    
-    # Payment terms analysis
     payment_terms_analysis = df['payment_terms'].value_counts()
     
-    # Generate insights
     insights = []
-    
     if overdue_invoices > 0:
-        insights.append(f"🚨 {overdue_invoices} hóa đơn quá hạn (${overdue_amount:,.2f})")
-    
-    if pending_amount > total_amount * 0.3:
-        insights.append(f"⚠️ {pending_amount/total_amount*100:.1f}% tổng giá trị hóa đơn chưa thanh toán")
-    
-    avg_invoice_amount = total_amount / total_invoices if total_invoices > 0 else 0
-    if avg_invoice_amount > 10000:
-        insights.append("💰 Hóa đơn trung bình cao - cần theo dõi cash flow")
-    
-    return f"""
-**Tổng quan hóa đơn:**
-- Tổng số hóa đơn: {total_invoices}
-- Đã thanh toán: {paid_invoices} (${total_amount - pending_amount:,.2f})
-- Chưa thanh toán: {pending_invoices} (${pending_amount:,.2f})
-- Quá hạn: {overdue_invoices} (${overdue_amount:,.2f})
+        insights.append(f"🚨 Có {overdue_invoices} hóa đơn đã quá hạn với tổng giá trị là {overdue_amount:,.2f} USD. Cần hành động ngay.")
+    if pending_amount > total_amount * 0.5:
+        insights.append(f"⚠️ Hơn 50% tổng giá trị hóa đơn ({pending_amount/total_amount:.1%}) đang chờ thanh toán.")
 
-**Top 5 vendors theo giá trị:**
+    return f"""
+**Báo cáo tổng quan về hóa đơn:**
+
+**Thống kê chính:**
+- **Tổng số hóa đơn:** {total_invoices}
+- **Đã thanh toán:** {paid_invoices} (Tổng: {paid_amount:,.2f} USD)
+- **Chưa thanh toán:** {pending_invoices} (Tổng: {pending_amount:,.2f} USD)
+- **Quá hạn:** {overdue_invoices} (Tổng: {overdue_amount:,.2f} USD)
+
+**Top nhà cung cấp theo giá trị:**
 {vendor_summary.head().to_string()}
 
 **Phân tích điều khoản thanh toán:**
 {payment_terms_analysis.to_string()}
 
-**Insights:**
-{chr(10).join(insights) if insights else "✅ Tất cả hóa đơn đều trong tình trạng tốt"}
+**Thông tin chi tiết quan trọng:**
+{''.join(f'- {i}\n' for i in insights) if insights else "✅ Mọi thứ đều ổn."}
+"""
+llm = ChatOpenAI(temperature=0, model="gpt-4", openai_api_key=os.getenv("OPENAI_API_KEY"))
+
+tools = [analyze_all_invoices]
+prompt_template = """
+You are an expert financial assistant specializing in invoice management, responding in Vietnamese.
+
+You have access to the following tools:
+
+{tools}
+
+Use the following format:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question in Vietnamese.
+
+Begin!
+
+Question: {input}
+{agent_scratchpad}
 """
 
-def invoice_tool(query: str) -> str:
-    """Main invoice analysis tool"""
-    df = load_invoice_data()
-    return analyze_invoice_status(df)
+prompt = PromptTemplate.from_template(prompt_template)
 
-class InvoiceAgentExecutor:
-    """Invoice Management Agent Executor"""
-    
-    def invoke(self, inputs: Dict[str, Any]) -> Dict[str, Any]:
-        query = inputs.get("input", "")
-        result = invoice_tool(query)
-        
-        return {"output": result}
+# 4. Create the ReAct Agent
+agent = create_react_agent(llm, tools, prompt)
 
-invoice_agent_executor = InvoiceAgentExecutor()
+# 5. Create the Agent Executor
+invoice_agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)

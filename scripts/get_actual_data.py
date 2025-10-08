@@ -42,7 +42,6 @@ def get_sp500_tickers():
     ]
     return tickers
 
-# --- 2. Configuration: Define Necessary Columns ---
 NECESSARY_COLUMNS = [
     'Total Cash From Operating Activities', # Our Target Variable
     'Net Income',

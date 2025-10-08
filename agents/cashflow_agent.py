@@ -372,6 +372,6 @@ class CashFlowAgentExecutor:
 
 # Initialize with default OpenAI model
 cashflow_agent_executor = CashFlowAgentExecutor(
-    model_name="gpt-5-nano",  # You can change to "gpt-4" or other models
-    use_local=False  # Set to True to use local Ollama model
+    model_name="gpt-5-nano",  
+    use_local=False  
 )
